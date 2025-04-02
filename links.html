@@ -24,15 +24,15 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1743440495190">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1743597793908">
 
-<link rel="stylesheet" href="/css/style.css?v=1743440495190">
+<link rel="stylesheet" href="/css/style.css?v=1743597793908">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1743440495190">
+        <link rel="stylesheet" href="/custom.css?v=1743597793908">
     
 
 
@@ -42,12 +42,13 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1743440495190"></script>
+<script async src="/js/app.js?v=1743597793908"></script>
 
  
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D4ZJ9G024"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script> 
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -189,7 +190,14 @@
 </div><!-- .nexmoe-drawer --></div><div id="nexmoe-content"><div class="nexmoe-primary"><div class="nexmoe-post"><article class="nexmoe-py"><h2 id="友情链接"><a href="#友情链接" class="headerlink" title="友情链接"></a>友情链接</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://www.wolfhime.com/" title="欲望之花"><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://www.wolfhime.com/wp-content/uploads/2022/11/logo-1-768x586.png" alt="狼姬的个人游戏世界" data-caption="狼姬的个人游戏世界" loading="lazy"></a></li>
 </ul>
-</article><div class="nexmoe-post-footer">请在你的配置文件中设置 slotComment
+</article><div class="nexmoe-post-footer"><div id="vcomments"></div>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'YecVxUTZNrc5Vtwf3EiBVjDS-gzGzoHsz',
+        appKey: 'K8RWMiZS6uPd5M4Ymt1RoTXO'
+    })
+</script>
 </div></div></div><div class="nexmoe-post-right">    <div class="nexmoe-fixed">
         <div class="nexmoe-tool">
 
