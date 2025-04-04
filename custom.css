@@ -1,7 +1,7 @@
 :root {
     --gutter: 24px;
     --radius: 13px;
-    --color-primary: #ff4e6a;
+    --color-primary: #11d3bc;
     --color2: #ff761e;
     --color3: #ffb900;
     --color4: #33d57a;
@@ -20,6 +20,7 @@
     --color-text-1: #111;
     --color-text-2: #444;
     --color-text-3: #363636;
+    --color-text-4: #FFF;
     --color-DIY1: #11d3bc;
     --color-DIY2: #404b6930;
     --color-DIY3: #283149;
@@ -71,6 +72,45 @@ article p {
     position: relative;
     COLOR: var(--color-DIY1);
 }
+
+.nexmoe-post article p a {
+    color: var(--color-DIY1);
+    position: relative; /* 为伪元素定位提供参考 */
+    text-decoration: none; /* 去除默认下划线 */
+    
+}
+
+
+
+.nexmoe-post article p a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* 调整下划线位置 */
+    width: 100%;
+    height: 2px; /* 下划线粗细 */
+    background: var(--color-DIY1); /* 保持颜色统一 */
+    transform: scaleX(0); /* 初始状态不可见 */
+    transform-origin: left; /* 从左向右展开 */
+    transition: transform 0.3s ease-in-out; /* 动画参数 */
+}
+
+article {
+    color: #fff;
+    font-family: microsoft yahei;
+}
+
+
+
+article h1, article h2, article h3, article h4, article h5, article h6 {
+    color: var(--color-text-4);
+    margin: 24px 0;
+}
+
+article p a:hover::after {
+    transform: scaleX(1); /* 悬停时完全展开 */
+}
+
 
 .nexmoe #nexmoe-header .nexmoe-count div span {
     color: var(--color-DIY1);
