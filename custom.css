@@ -26,6 +26,200 @@
     --color-DIY3: #283149;
   }
 
+  /* 全局覆盖媒体查询样式，确保移动端和桌面端样式一致 */
+  
+  /* 覆盖布局相关样式 */
+  .nexmoe #nexmoe-content .nexmoe-primary {
+    width: 100% !important;
+    position: relative !important;
+    min-height: 100vh;
+    box-shadow: 0 0 0rem var(--color-shadow); 
+    background-color: var(--color-DIY3);
+    float: left;
+    padding: 24px;
+  }
+  
+  /* 确保侧边栏始终显示 */
+  .nexmoe #nexmoe-content .nexmoe-secondary {
+    display: block !important;
+  }
+  
+  /* 覆盖容器宽度 */
+  .nexmoe .nexmoe-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+  }
+  
+  /* 覆盖导航栏样式 */
+  .nexmoe #nexmoe-header {
+    margin-left: 0 !important;
+  }
+  
+  .nexmoe #nexmoe-header .mdui-drawer {
+    left: 0 !important;
+    width: 260px !important;
+  }
+  
+  /* 覆盖文章内容样式 */
+  .nexmoe-post .nexmoe-post-cover {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+  }
+  
+  /* 覆盖相册表格高度 */
+  article > table.nexmoe-album th,
+  article > table.nexmoe-album td {
+    height: 300px !important;
+  }
+  
+  /* 覆盖分类样式 */
+  .nexmoe-archives .categories a {
+    width: calc(33.333333333% - 8px) !important;
+  }
+  
+  .nexmoe-archives .categories a:nth-child(3n+3) {
+    margin-right: 0 !important;
+  }
+  
+  .nexmoe-archives .categories a:nth-child(2n+2) {
+    margin-right: 12px !important;
+  }
+  
+  /* 覆盖搜索框样式 */
+  #nexmoe-search-space .search-container {
+    width: 540px !important;
+  }
+  
+  /* 覆盖社交图标样式 */
+  #nexmoe-header .nexmoe-social a {
+    margin: 10px;
+    width: 50px !important;
+    height: 50px !important;
+    line-height: 50px !important;
+  }
+  
+  /* 覆盖文章右侧工具栏 */
+  .nexmoe-post-right {
+    margin: 24px 0;
+    text-align: right;
+  }
+  
+  .nexmoe-post-right .nexmoe-fixed {
+    height: calc(100vh - 240px);
+    top: 120px !important;
+    bottom: auto !important;
+    right: 24px !important;
+  }
+  
+  .nexmoe-post-right .nexmoe-tool {
+    right: 0 !important;
+    left: auto !important;
+  }
+  
+  /* 覆盖标签云样式 */
+  article.nexmoe-py ul li {
+    width: calc(25% - 10px) !important;
+  }
+  
+  /* 覆盖背景图样式 */
+  #nexmoe-background .mdui-appbar {
+    display: none !important;
+  }
+  
+  /* 确保toc目录样式一致 */
+  .nexmoe-toc {
+    width: 420px;
+    max-width: calc(100vw - 40px);
+  }
+  
+  /* 覆盖页面布局，使其在所有设备上保持一致 */
+  @media screen and (max-width: 1024px), screen and (max-width: 768px), screen and (max-width: 1023px) {
+    /* 强制使用桌面端样式 */
+    .nexmoe #nexmoe-content .nexmoe-primary {
+      width: 100% !important;
+      position: relative !important;
+      min-height: 100vh;
+    }
+    
+    .nexmoe #nexmoe-content .nexmoe-secondary {
+      display: block !important;
+    }
+    
+    .nexmoe #nexmoe-header {
+      margin-left: 0 !important;
+    }
+    
+    .nexmoe #nexmoe-header .mdui-drawer {
+      left: 0 !important;
+      width: 260px !important;
+    }
+    
+    .nexmoe-archives .categories a {
+      width: calc(33.333333333% - 8px) !important;
+    }
+    
+    .nexmoe-archives .categories a:nth-child(3n+3) {
+      margin-right: 0 !important;
+    }
+    
+    .nexmoe-archives .categories a:nth-child(2n+2) {
+      margin-right: 12px !important;
+    }
+    
+    article > table.nexmoe-album th,
+    article > table.nexmoe-album td {
+      height: 300px !important;
+    }
+    
+    #nexmoe-background .mdui-appbar {
+      display: none !important;
+    }
+    
+    .search-container {
+      align-items: flex-start !important;
+    }
+    
+    .search-container .search-header,
+    .search-container .search-body {
+      width: 540px !important;
+    }
+    
+    #nexmoe-search-space .search-container {
+      width: 540px !important;
+    }
+    
+    #nexmoe-header .nexmoe-social a {
+      margin: 10px;
+      width: 50px !important;
+      height: 50px !important;
+      line-height: 50px !important;
+    }
+    
+    .nexmoe-post-right {
+      margin: 24px 0;
+      text-align: right !important;
+    }
+    
+    .nexmoe-post-right .nexmoe-fixed {
+      height: calc(100vh - 240px);
+      top: 120px !important;
+      bottom: auto !important;
+      right: 24px !important;
+    }
+    
+    .nexmoe-post-right .nexmoe-tool {
+      right: 0 !important;
+      left: auto !important;
+    }
+    
+    article.nexmoe-py ul li {
+      width: calc(25% - 10px) !important;
+    }
+  }
+
   .nexmoe #nexmoe-header .nexmoe-list .nexmoe-list-item.true {
     opacity: 0.9;
     background: var(--color-DIY1);

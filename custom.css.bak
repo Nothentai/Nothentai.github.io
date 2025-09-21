@@ -1,0 +1,170 @@
+:root {
+    --gutter: 24px;
+    --radius: 13px;
+    --color-primary: #11d3bc;
+    --color2: #ff761e;
+    --color3: #ffb900;
+    --color4: #33d57a;
+    --color5: #00dbff;
+    --color6: #1a98ff;
+    --color7: #9090ff;
+    --color-primary-bg: rgba(255,78,106,0.15);
+    --color2-bg: rgba(255,118,30,0.15);
+    --color3-bg: rgba(255,185,0,0.15);
+    --color4-bg: rgba(51,213,122,0.15);
+    --color5-bg: rgba(0,219,255,0.15);
+    --color6-bg: rgba(26,152,255,0.15);
+    --color7-bg: rgba(144,144,255,0.15);
+    --color-shadow: rgba(161,177,204,0.4);
+    --color-card: #fff;
+    --color-text-1: #111;
+    --color-text-2: #444;
+    --color-text-3: #363636;
+    --color-text-4: #FFF;
+    --color-DIY1: #11d3bc;
+    --color-DIY2: #404b6930;
+    --color-DIY3: #283149;
+  }
+
+  .nexmoe #nexmoe-header .nexmoe-list .nexmoe-list-item.true {
+    opacity: 0.9;
+    background: var(--color-DIY1);
+    box-shadow: 0 2px 12px var(--color-DIY1);
+}
+
+#nexmoe-background .nexmoe-bg {
+    opacity: 1;
+    background-size: cover;
+    filter: blur(0px);
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.nexmoe-widget-wrap {
+    box-shadow: 0 0 0rem var(--color-shadow);
+    background-color: var(--color-DIY2);
+    margin: 20px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    white-space: normal;
+}
+.nexmoe #nexmoe-content .nexmoe-primary {
+    box-shadow: 0 0 0rem var(--color-shadow); 
+    background-color: var(--color-DIY3);
+    float: left;
+    width: 100%;
+    padding: 24px;
+    position: absolute;
+    min-height: 100vh;
+}
+
+.nexmoe-rainbow a:nth-child(7n+1) {
+    background-color: rgb(0 0 0 / 15%);
+    color: var(--color-DIY1);
+}
+
+article p {
+    margin: 24px 0;
+    position: relative;
+    COLOR: var(--color-DIY1);
+}
+
+.nexmoe-post article p a {
+    color: var(--color-DIY1);
+    position: relative; /* 为伪元素定位提供参考 */
+    text-decoration: none; /* 去除默认下划线 */
+    
+}
+
+
+
+.nexmoe-post article p a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* 调整下划线位置 */
+    width: 100%;
+    height: 2px; /* 下划线粗细 */
+    background: var(--color-DIY1); /* 保持颜色统一 */
+    transform: scaleX(0); /* 初始状态不可见 */
+    transform-origin: left; /* 从左向右展开 */
+    transition: transform 0.3s ease-in-out; /* 动画参数 */
+}
+
+article {
+    color: #fff;
+    font-family: microsoft yahei;
+}
+
+
+
+article h1, article h2, article h3, article h4, article h5, article h6 {
+    color: var(--color-text-4);
+    margin: 24px 0;
+}
+
+article p a:hover::after {
+    transform: scaleX(1); /* 悬停时完全展开 */
+}
+
+
+.nexmoe #nexmoe-header .nexmoe-count div span {
+    color: var(--color-DIY1);
+    display: block;
+}
+
+
+.nexmoe-post .nexmoe-post-copyright {
+    margin: 0 -25px;
+    margin-bottom: 25px;
+    padding: 25px;
+    color: var(--color-DIY1);
+    background-color: var(--color-DIY3);
+    line-height: 1.5em;
+    position: relative;
+    overflow: hidden;
+    border-top: 2px dashed #a1a1a1; /* 上边框为2px宽的黑色虚线 */
+    border-right: none; /* 右边框无 */
+    border-bottom: none; /* 下边框无 */
+    border-left: none; /* 左边框无 */
+}
+
+.nexmoe-post .nexmoe-post-copyright a {
+    color: var(--color-DIY1);
+    position: relative; /* 为伪元素定位提供参考 */
+    text-decoration: none; /* 去除默认下划线 */
+}
+
+.nexmoe-post .nexmoe-post-copyright a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* 调整下划线位置 */
+    width: 100%;
+    height: 2px; /* 下划线粗细 */
+    background: var(--color-DIY1); /* 保持颜色统一 */
+    transform: scaleX(0); /* 初始状态不可见 */
+    transform-origin: left; /* 从左向右展开 */
+    transition: transform 0.3s ease-in-out; /* 动画参数 */
+}
+
+.nexmoe-post .nexmoe-post-copyright a:hover::after {
+    transform: scaleX(1); /* 悬停时完全展开 */
+}
+
+.nexmoe-post-footer {
+    background-color: var(--color-DIY3);
+    padding: 24px;
+    margin: -24px;
+    margin-top: 0;
+    color: var(--color-DIY1);
+}
+
+.nexmoe-widget-wrap .nexmoe-link ul li a p {
+    margin: 10px 0;
+    color: var(--color-DIY1);
+}
